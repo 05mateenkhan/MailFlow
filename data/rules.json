@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Critical Alerts to Admin",
+    "description": "Escalate urgent security and system alerts directly to admin team",
+    "intent_match": "urgent_alert",
+    "urgency_min": 8,
+    "action_type": "escalate",
+    "action_value": "admin@company.com",
+    "require_hitl": false
+  },
+  {
+    "name": "High Priority Invoices",
+    "description": "Flag invoices over urgency 6 for immediate finance review",
+    "intent_match": "invoice",
+    "urgency_min": 6,
+    "action_type": "label",
+    "action_value": "urgent-payment",
+    "require_hitl": true
+  },
+  {
+    "name": "Standard Invoice Processing",
+    "description": "Route regular invoices to finance department",
+    "intent_match": "invoice",
+    "urgency_min": 0,
+    "action_type": "forward",
+    "action_value": "finance@company.com",
+    "require_hitl": false
+  },
+  {
+    "name": "Spam Auto-Filter",
+    "description": "Automatically label detected spam",
+    "intent_match": "spam",
+    "urgency_min": 0,
+    "action_type": "label",
+    "action_value": "spam",
+    "require_hitl": false
+  },
+  {
+    "name": "Support Queries - Reply with KB",
+    "description": "Auto-reply to support questions with knowledge base context",
+    "intent_match": "support_query",
+    "urgency_min": 0,
+    "action_type": "reply",
+    "action_value": "auto",
+    "require_hitl": false
+  },
+  {
+    "name": "High Urgency Support - HITL",
+    "description": "Route high-priority support issues to human review",
+    "intent_match": "support_query",
+    "urgency_min": 7,
+    "action_type": "label",
+    "action_value": "escalated-support",
+    "require_hitl": true
+  },
+  {
+    "name": "Meeting Requests to Calendar",
+    "description": "Forward meeting requests to calendar management system",
+    "intent_match": "meeting_request",
+    "urgency_min": 0,
+    "action_type": "forward",
+    "action_value": "calendar@company.com",
+    "require_hitl": false
+  },
+  {
+    "name": "Urgent Meeting Requests",
+    "description": "Flag urgent meeting requests for HITL approval",
+    "intent_match": "meeting_request",
+    "urgency_min": 6,
+    "action_type": "label",
+    "action_value": "urgent-meeting",
+    "require_hitl": true
+  },
+  {
+    "name": "General Inquiry Default Route",
+    "description": "Send general emails to appropriate department inbox",
+    "intent_match": "general",
+    "urgency_min": 0,
+    "action_type": "forward",
+    "action_value": "support@company.com",
+    "require_hitl": false
+  }
+]
