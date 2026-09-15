@@ -10,8 +10,8 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MailMind Dashboard",
-  description: "MailMind agentic email dashboard",
+  title: "Mail Flow Dashboard",
+  description: "Mail Flow agentic email dashboard",
 };
 
 export default function RootLayout({

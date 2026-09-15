@@ -9,7 +9,7 @@ class Settings(BaseSettings):
     resend_api_key: str = ""
     resend_webhook_secret: str = ""
     resend_api_base_url: str = "https://api.resend.com"
-    resend_from_email: str = "MailMind <no-reply@mailmind.dev>"
+    resend_from_email: str = "Mail Flow <no-reply@mailflow.dev>"
 
     groq_api_key: str = ""
     llm_model: str = "llama-3.3-70b-versatile"
@@ -18,7 +18,7 @@ class Settings(BaseSettings):
     hitl_confidence_threshold: float = 0.75
     frontend_origin: str = "http://localhost:3000"
 
-    database_url: str = "postgresql://user:pass@localhost:5432/mailmind"
+    database_url: str = "postgresql://user:pass@localhost:5432/mailflow"
 
 
 @lru_cache(maxsize=1)

@@ -41,7 +41,7 @@ export default function FeedPage() {
       <main className="flex-1 p-4 md:p-8 space-y-6">
         <header className="flex items-center justify-between border border-zinc-800 rounded p-4">
           <h1 className="text-2xl font-semibold text-amber-400 tracking-tight">
-            MailMind
+            Mail Flow
           </h1>
           <div className="inline-flex items-center gap-2 text-sm text-zinc-300">
             <span

@@ -12,7 +12,7 @@ from api.webhook import router as webhook_router
 from config import get_settings
 from models import create_db_and_tables
 
-app = FastAPI(title="MailMind Backend")
+app = FastAPI(title="Mail Flow Backend")
 settings = get_settings()
 
 app.add_middleware(

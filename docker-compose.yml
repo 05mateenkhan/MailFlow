@@ -2,16 +2,16 @@ services:
   db:
     image: postgres:16-alpine
     environment:
-      POSTGRES_USER: ${POSTGRES_USER:-mailmind}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-mailmind}
-      POSTGRES_DB: ${POSTGRES_DB:-mailmind}
+      POSTGRES_USER: ${POSTGRES_USER:-mailflow}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-mailflow}
+      POSTGRES_DB: ${POSTGRES_DB:-mailflow}
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
       test:
         [
           "CMD-SHELL",
-          "pg_isready -U ${POSTGRES_USER:-mailmind} -d ${POSTGRES_DB:-mailmind}",
+          "pg_isready -U ${POSTGRES_USER:-mailflow} -d ${POSTGRES_DB:-mailflow}",
         ]
       interval: 5s
       timeout: 5s

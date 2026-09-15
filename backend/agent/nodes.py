@@ -332,7 +332,7 @@ def log_result_node(state: EmailAgentState) -> EmailAgentState:
                 setattr(existing, key, value)
 
     print(
-        "mailmind_result",
+        "mail_flow_result",
         {
             "email_id": state.get("email_id"),
             "intent": intent,

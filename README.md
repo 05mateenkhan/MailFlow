@@ -1,4 +1,4 @@
-# MailMind 🧠✉️
+# Mail Flow 🧠✉️
 
 > An agentic email processing system powered by LangGraph — reads incoming emails via Resend webhooks, understands intent using LLMs, and autonomously acts based on user-defined rules.
 
@@ -14,7 +14,7 @@
 
 Professionals deal with 100+ emails daily. Most email clients offer rigid, keyword-based filters with zero semantic understanding. Important emails get missed, repetitive actions pile up, and rule management is painful.
 
-**MailMind** closes this gap. It's an AI agent that:
+**Mail Flow** closes this gap. It's an AI agent that:
 
 1. Receives emails in real-time via Resend webhooks (event-driven, no polling)
 2. Uses an LLM to classify intent and extract structured metadata
@@ -26,7 +26,7 @@ Professionals deal with 100+ emails daily. Most email clients offer rigid, keywo
 
 ## Architecture
 
-![MailMind Architecture Diagram](mailmind-architecture.png)
+![Mail Flow Architecture Diagram](mail-flow-architecture.png)
 
 ### Key Design Decisions
 
@@ -88,7 +88,7 @@ Professionals deal with 100+ emails daily. Most email clients offer rigid, keywo
 ## Project Structure
 
 ```
-mailmind/
+mail-flow/
 ├── backend/
 │   ├── agent/
 │   │   ├── graph.py          # LangGraph StateGraph definition
@@ -133,8 +133,8 @@ mailmind/
 ### 1. Clone and configure
 
 ```bash
-git clone https://github.com/sujeetgund/mailmind.git
-cd mailmind
+git clone https://github.com/sujeetgund/mail-flow.git
+cd mail-flow
 cp .env.example .env
 # Fill in RESEND_API_KEY, GROQ_API_KEY, DATABASE_URL
 ```
@@ -228,7 +228,7 @@ GROQ_API_KEY=gsk_xxxx
 LLM_MODEL=llama-3.3-70b-versatile
 
 # Database
-DATABASE_URL=postgresql://user:pass@localhost:5432/mailmind
+DATABASE_URL=postgresql://user:pass@localhost:5432/mailflow
 
 # App
 HITL_CONFIDENCE_THRESHOLD=0.75
